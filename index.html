@@ -14,37 +14,98 @@
             justify-content: center;
             align-items: center;
 
-            /* Sky Blue Background */
-            background-color: #87CEEB;
+            /* NIGHT SKY BACKGROUND */
+            background: linear-gradient(to bottom,
+                    #1f2735 0%,
+                    #3a3d52 45%,
+                    #7a5d52 75%,
+                    #d08b63 100%);
         }
 
-        /* FAST MOVING CLOUDS */
+        /* REALISTIC SMALL MOON */
+
+        .moon {
+            position: absolute;
+
+            top: 90px;
+            left: 150px;
+
+            width: 18px;
+            height: 18px;
+
+            border-radius: 50%;
+
+            background: #fffdf5;
+
+            box-shadow:
+                0 0 6px #fffdf5,
+                0 0 12px #fff4c2;
+        }
+
+        .moon::after {
+            content: "";
+
+            position: absolute;
+
+            top: -1px;
+            left: 5px;
+
+            width: 18px;
+            height: 18px;
+
+            border-radius: 50%;
+
+            background: #2b3140;
+        }
+
+        /* SMALL STAR */
+
+        .star {
+            position: absolute;
+
+            top: 110px;
+            right: 110px;
+
+            width: 3px;
+            height: 3px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 5px white,
+                0 0 10px white;
+        }
+
+        /* MOVING CLOUDS */
 
         .cloud {
             position: absolute;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(0, 0, 0, 0.35);
+
             animation: moveClouds linear infinite;
         }
 
         .cloud1 {
-            top: 10%;
-            left: -20%;
-            font-size: 90px;
-            animation-duration: 12s;
+            bottom: 120px;
+            left: -30%;
+            font-size: 160px;
+            animation-duration: 28s;
         }
 
         .cloud2 {
-            top: 30%;
-            left: -30%;
-            font-size: 110px;
-            animation-duration: 16s;
+            bottom: 60px;
+            left: -40%;
+            font-size: 190px;
+            animation-duration: 35s;
         }
 
         .cloud3 {
-            top: 60%;
+            bottom: 170px;
             left: -25%;
-            font-size: 80px;
-            animation-duration: 14s;
+            font-size: 120px;
+            animation-duration: 30s;
         }
 
         @keyframes moveClouds {
@@ -54,7 +115,7 @@
             }
 
             100% {
-                transform: translateX(140vw);
+                transform: translateX(150vw);
             }
         }
 
@@ -62,36 +123,37 @@
 
         .heart {
             position: absolute;
-            color: rgba(255, 255, 255, 0.35);
-            font-size: 25px;
-            animation: float 12s linear infinite;
-        }
 
-        .heart:nth-child(4) {
-            left: 10%;
-            animation-duration: 8s;
-        }
+            color: rgba(255, 192, 203, 0.25);
 
-        .heart:nth-child(5) {
-            left: 25%;
-            animation-duration: 11s;
-            font-size: 30px;
+            font-size: 22px;
+
+            animation: float 14s linear infinite;
         }
 
         .heart:nth-child(6) {
-            left: 45%;
-            animation-duration: 9s;
+            left: 10%;
+            animation-duration: 10s;
         }
 
         .heart:nth-child(7) {
-            left: 65%;
-            animation-duration: 13s;
-            font-size: 28px;
+            left: 28%;
+            animation-duration: 14s;
         }
 
         .heart:nth-child(8) {
-            left: 85%;
-            animation-duration: 10s;
+            left: 50%;
+            animation-duration: 12s;
+        }
+
+        .heart:nth-child(9) {
+            left: 72%;
+            animation-duration: 16s;
+        }
+
+        .heart:nth-child(10) {
+            left: 88%;
+            animation-duration: 11s;
         }
 
         @keyframes float {
@@ -101,7 +163,7 @@
                 opacity: 0;
             }
 
-            30% {
+            25% {
                 opacity: 1;
             }
 
@@ -115,39 +177,53 @@
 
         h1 {
             position: relative;
-            z-index: 2;
+            z-index: 5;
 
             font-family: 'Segoe UI', sans-serif;
+
             text-align: center;
+
             line-height: 1.8;
 
             padding: 20px;
 
             font-size: 20px;
+
             font-weight: 500;
 
-            animation: glowText 2s infinite alternate;
+            animation: glowText 2.5s infinite alternate;
         }
 
         @keyframes glowText {
 
             0% {
-                color: #001f54;
-                text-shadow:
-                    0 0 5px #4d79ff;
-            }
+                color: #d9e6ff;
 
-            50% {
-                color: #002b80;
                 text-shadow:
-                    0 0 10px #5c85ff;
+                    0 0 5px rgba(255,255,255,0.3);
             }
 
             100% {
-                color: #003399;
+                color: #ffffff;
+
                 text-shadow:
-                    0 0 10px #80aaff;
+                    0 0 10px rgba(255,255,255,0.7);
             }
+        }
+
+        /* SIGNATURE */
+
+        .signature {
+            position: absolute;
+
+            right: 20px;
+            bottom: 15px;
+
+            color: rgba(255, 255, 255, 0.8);
+
+            font-size: 14px;
+
+            font-family: 'Segoe UI', sans-serif;
         }
 
     </style>
@@ -155,7 +231,15 @@
 
 <body>
 
-    <!-- FAST MOVING CLOUDS -->
+    <!-- REALISTIC MOON -->
+
+    <div class="moon"></div>
+
+    <!-- STAR -->
+
+    <div class="star"></div>
+
+    <!-- MOVING CLOUDS -->
 
     <div class="cloud cloud1">☁️</div>
     <div class="cloud cloud2">☁️</div>
@@ -191,6 +275,12 @@
         I will stand beside you in every moment. ❤️
 
     </h1>
+
+    <!-- SIGNATURE -->
+
+    <div class="signature">
+        — By Aravinth ❤️
+    </div>
 
 </body>
 
