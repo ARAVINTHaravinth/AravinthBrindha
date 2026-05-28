@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>For Brindha ❤️</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -16,11 +18,15 @@
         body {
             height: 100vh;
             overflow: hidden;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             font-family: 'Segoe UI', sans-serif;
+
             position: relative;
+
             background: black;
         }
 
@@ -30,20 +36,22 @@
             position: absolute;
             inset: 0;
 
-            background-size: cover;
+            background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
 
+            background-color: black;
+
             animation: fade 18s infinite;
 
-            transform: scale(1.05);
+            z-index: 1;
         }
 
         .bg1 {
             background-image:
                 linear-gradient(rgba(0,0,0,0.35),
                 rgba(0,0,0,0.35)),
-                url("photo1.jpg");
+                url("photo1.jpg.jpeg");
 
             animation-delay: 0s;
         }
@@ -52,7 +60,7 @@
             background-image:
                 linear-gradient(rgba(0,0,0,0.35),
                 rgba(0,0,0,0.35)),
-                url("photo2.jpg");
+                url("photo2.jpg.jpg");
 
             animation-delay: 6s;
         }
@@ -61,7 +69,7 @@
             background-image:
                 linear-gradient(rgba(0,0,0,0.40),
                 rgba(0,0,0,0.40)),
-                url("photo3.jpg");
+                url("photo3.jpg.jpg");
 
             animation-delay: 12s;
         }
@@ -93,6 +101,7 @@
 
         .moon {
             position: absolute;
+
             top: 90px;
             left: 150px;
 
@@ -123,7 +132,7 @@
 
             border-radius: 50%;
 
-            background: rgba(0,0,0,0.4);
+            background: rgba(0,0,0,0.45);
         }
 
         /* STAR */
@@ -152,6 +161,7 @@
 
         .cloud {
             position: absolute;
+
             color: rgba(255,255,255,0.15);
 
             animation: moveClouds linear infinite;
@@ -162,21 +172,27 @@
         .cloud1 {
             bottom: 120px;
             left: -30%;
+
             font-size: 160px;
+
             animation-duration: 28s;
         }
 
         .cloud2 {
             bottom: 60px;
             left: -40%;
+
             font-size: 190px;
+
             animation-duration: 35s;
         }
 
         .cloud3 {
             bottom: 170px;
             left: -25%;
+
             font-size: 120px;
+
             animation-duration: 30s;
         }
 
@@ -247,10 +263,11 @@
             }
         }
 
-        /* LOVE TEXT */
+        /* LOVE MESSAGE */
 
         h1 {
             position: relative;
+
             z-index: 5;
 
             text-align: center;
@@ -299,6 +316,25 @@
 
             text-shadow:
                 0 0 10px rgba(0,0,0,0.8);
+        }
+
+        /* MOBILE */
+
+        @media(max-width: 600px) {
+
+            h1 {
+                font-size: 18px;
+                padding: 15px;
+            }
+
+            .moon {
+                top: 50px;
+                left: 40px;
+            }
+
+            .star {
+                right: 40px;
+            }
         }
 
     </style>
