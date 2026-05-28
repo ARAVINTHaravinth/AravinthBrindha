@@ -1,32 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Brindha ❤️</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
-            margin: 0;
             height: 100vh;
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-
-            /* NIGHT SKY BACKGROUND */
-            background: linear-gradient(to bottom,
-                    #1f2735 0%,
-                    #3a3d52 45%,
-                    #7a5d52 75%,
-                    #d08b63 100%);
+            font-family: 'Segoe UI', sans-serif;
+            position: relative;
+            background: black;
         }
 
-        /* REALISTIC SMALL MOON */
+        /* BACKGROUND IMAGES */
+
+        .bg {
+            position: absolute;
+            inset: 0;
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            animation: fade 18s infinite;
+
+            transform: scale(1.05);
+        }
+
+        .bg1 {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.35),
+                rgba(0,0,0,0.35)),
+                url("photo1.jpg");
+
+            animation-delay: 0s;
+        }
+
+        .bg2 {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.35),
+                rgba(0,0,0,0.35)),
+                url("photo2.jpg");
+
+            animation-delay: 6s;
+        }
+
+        .bg3 {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.40),
+                rgba(0,0,0,0.40)),
+                url("photo3.jpg");
+
+            animation-delay: 12s;
+        }
+
+        @keyframes fade {
+
+            0% {
+                opacity: 0;
+            }
+
+            8% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            38% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* MOON */
 
         .moon {
             position: absolute;
-
             top: 90px;
             left: 150px;
 
@@ -40,6 +106,8 @@
             box-shadow:
                 0 0 6px #fffdf5,
                 0 0 12px #fff4c2;
+
+            z-index: 3;
         }
 
         .moon::after {
@@ -55,10 +123,10 @@
 
             border-radius: 50%;
 
-            background: #2b3140;
+            background: rgba(0,0,0,0.4);
         }
 
-        /* SMALL STAR */
+        /* STAR */
 
         .star {
             position: absolute;
@@ -76,15 +144,19 @@
             box-shadow:
                 0 0 5px white,
                 0 0 10px white;
+
+            z-index: 3;
         }
 
-        /* MOVING CLOUDS */
+        /* CLOUDS */
 
         .cloud {
             position: absolute;
-            color: rgba(0, 0, 0, 0.35);
+            color: rgba(255,255,255,0.15);
 
             animation: moveClouds linear infinite;
+
+            z-index: 3;
         }
 
         .cloud1 {
@@ -119,39 +191,41 @@
             }
         }
 
-        /* FLOATING HEARTS */
+        /* HEARTS */
 
         .heart {
             position: absolute;
 
-            color: rgba(255, 192, 203, 0.25);
+            color: rgba(255, 192, 203, 0.30);
 
             font-size: 22px;
 
             animation: float 14s linear infinite;
+
+            z-index: 3;
         }
 
-        .heart:nth-child(6) {
+        .heart:nth-child(8) {
             left: 10%;
             animation-duration: 10s;
         }
 
-        .heart:nth-child(7) {
+        .heart:nth-child(9) {
             left: 28%;
             animation-duration: 14s;
         }
 
-        .heart:nth-child(8) {
+        .heart:nth-child(10) {
             left: 50%;
             animation-duration: 12s;
         }
 
-        .heart:nth-child(9) {
+        .heart:nth-child(11) {
             left: 72%;
             animation-duration: 16s;
         }
 
-        .heart:nth-child(10) {
+        .heart:nth-child(12) {
             left: 88%;
             animation-duration: 11s;
         }
@@ -179,8 +253,6 @@
             position: relative;
             z-index: 5;
 
-            font-family: 'Segoe UI', sans-serif;
-
             text-align: center;
 
             line-height: 1.8;
@@ -191,23 +263,23 @@
 
             font-weight: 500;
 
+            color: white;
+
             animation: glowText 2.5s infinite alternate;
+
+            text-shadow:
+                0 0 10px rgba(0,0,0,0.9),
+                0 0 20px rgba(0,0,0,0.7);
         }
 
         @keyframes glowText {
 
             0% {
                 color: #d9e6ff;
-
-                text-shadow:
-                    0 0 5px rgba(255,255,255,0.3);
             }
 
             100% {
                 color: #ffffff;
-
-                text-shadow:
-                    0 0 10px rgba(255,255,255,0.7);
             }
         }
 
@@ -219,11 +291,14 @@
             right: 20px;
             bottom: 15px;
 
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255,255,255,0.9);
 
             font-size: 14px;
 
-            font-family: 'Segoe UI', sans-serif;
+            z-index: 5;
+
+            text-shadow:
+                0 0 10px rgba(0,0,0,0.8);
         }
 
     </style>
@@ -231,7 +306,13 @@
 
 <body>
 
-    <!-- REALISTIC MOON -->
+    <!-- BACKGROUND IMAGES -->
+
+    <div class="bg bg1"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <!-- MOON -->
 
     <div class="moon"></div>
 
@@ -239,13 +320,13 @@
 
     <div class="star"></div>
 
-    <!-- MOVING CLOUDS -->
+    <!-- CLOUDS -->
 
     <div class="cloud cloud1">☁️</div>
     <div class="cloud cloud2">☁️</div>
     <div class="cloud cloud3">☁️</div>
 
-    <!-- FLOATING HEARTS -->
+    <!-- HEARTS -->
 
     <div class="heart">❤️</div>
     <div class="heart">💖</div>
@@ -253,7 +334,7 @@
     <div class="heart">💞</div>
     <div class="heart">❤️</div>
 
-    <!-- LOVE MESSAGE -->
+    <!-- MESSAGE -->
 
     <h1>
 
