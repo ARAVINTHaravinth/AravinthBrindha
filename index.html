@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>For Brindha ❤️</title>
 
@@ -30,7 +30,7 @@
             background: black;
         }
 
-        /* BACKGROUND SLIDESHOW */
+        /* SLIDESHOW */
 
         .slideshow {
             position: absolute;
@@ -42,49 +42,54 @@
             position: absolute;
             inset: 0;
 
-            /* FULL SCREEN FIT */
-
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-
             opacity: 0;
 
             animation: slideshow 15s infinite;
         }
 
+        /* PHOTO 1 */
+
         .slide1 {
-            background-image:
+
+            background:
                 linear-gradient(
                     rgba(0,0,0,0.35),
                     rgba(0,0,0,0.35)
                 ),
-                url("photo1.jpg.jpeg");
+                url("./photo1.jpg") center 25% / cover no-repeat;
 
             animation-delay: 0s;
         }
 
+        /* PHOTO 2 */
+
         .slide2 {
-            background-image:
+
+            background:
                 linear-gradient(
                     rgba(0,0,0,0.35),
                     rgba(0,0,0,0.35)
                 ),
-                url("photo2.jpg.jpg");
+                url("./photo2.jpg") center 25% / cover no-repeat;
 
             animation-delay: 5s;
         }
 
+        /* PHOTO 3 */
+
         .slide3 {
-            background-image:
+
+            background:
                 linear-gradient(
-                    rgba(0,0,0,0.35),
-                    rgba(0,0,0,0.35)
+                    rgba(0,0,0,0.40),
+                    rgba(0,0,0,0.40)
                 ),
-                url("photo3.jpg.jpg");
+                url("./photo3.jpg") center 25% / cover no-repeat;
 
             animation-delay: 10s;
         }
+
+        /* SLIDESHOW ANIMATION */
 
         @keyframes slideshow {
 
@@ -132,6 +137,7 @@
         }
 
         .moon::after {
+
             content: "";
 
             position: absolute;
@@ -219,7 +225,7 @@
             }
         }
 
-        /* FLOATING HEARTS */
+        /* HEARTS */
 
         .heart {
             position: absolute;
@@ -355,7 +361,7 @@
 
 <body>
 
-    <!-- BACKGROUND SLIDES -->
+    <!-- SLIDESHOW -->
 
     <div class="slideshow">
 
@@ -379,7 +385,7 @@
     <div class="cloud cloud2">☁️</div>
     <div class="cloud cloud3">☁️</div>
 
-    <!-- FLOATING HEARTS -->
+    <!-- HEARTS -->
 
     <div class="heart heart1">❤️</div>
     <div class="heart heart2">💖</div>
