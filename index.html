@@ -3,334 +3,316 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>For Brindha ❤️</title>
 
     <style>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
 
-        body {
-            height: 100vh;
-            overflow: hidden;
+        body{
+            height:100vh;
+            overflow:hidden;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
 
-            font-family: 'Segoe UI', sans-serif;
+            background:black;
 
-            position: relative;
+            font-family:'Segoe UI',sans-serif;
 
-            background: black;
+            position:relative;
         }
 
         /* SLIDESHOW */
 
-        .slideshow {
-            position: absolute;
-            inset: 0;
-            z-index: 1;
+        .slideshow{
+            position:absolute;
+            inset:0;
+            z-index:1;
         }
 
-        .slide {
-            position: absolute;
-            inset: 0;
+        .slide{
+            position:absolute;
+            width:100%;
+            height:100%;
 
-            opacity: 0;
+            object-fit:cover;
 
-            animation: slideshow 15s infinite;
+            opacity:0;
+
+            animation:fade 15s infinite;
         }
 
-        /* PHOTO 1 */
-
-        .slide1 {
-
-            background:
-                linear-gradient(
-                    rgba(0,0,0,0.35),
-                    rgba(0,0,0,0.35)
-                ),
-                url("./photo1.jpg") center 25% / cover no-repeat;
-
-            animation-delay: 0s;
+        .slide1{
+            animation-delay:0s;
         }
 
-        /* PHOTO 2 */
-
-        .slide2 {
-
-            background:
-                linear-gradient(
-                    rgba(0,0,0,0.35),
-                    rgba(0,0,0,0.35)
-                ),
-                url("./photo2.jpg") center 25% / cover no-repeat;
-
-            animation-delay: 5s;
+        .slide2{
+            animation-delay:5s;
         }
 
-        /* PHOTO 3 */
-
-        .slide3 {
-
-            background:
-                linear-gradient(
-                    rgba(0,0,0,0.40),
-                    rgba(0,0,0,0.40)
-                ),
-                url("./photo3.jpg") center 25% / cover no-repeat;
-
-            animation-delay: 10s;
+        .slide3{
+            animation-delay:10s;
         }
 
-        /* SLIDESHOW ANIMATION */
+        @keyframes fade{
 
-        @keyframes slideshow {
-
-            0% {
-                opacity: 0;
+            0%{
+                opacity:0;
             }
 
-            10% {
-                opacity: 1;
+            10%{
+                opacity:1;
             }
 
-            30% {
-                opacity: 1;
+            30%{
+                opacity:1;
             }
 
-            40% {
-                opacity: 0;
+            40%{
+                opacity:0;
             }
 
-            100% {
-                opacity: 0;
+            100%{
+                opacity:0;
             }
+        }
+
+        /* DARK OVERLAY */
+
+        .overlay{
+            position:absolute;
+            inset:0;
+
+            background:rgba(0,0,0,0.35);
+
+            z-index:2;
         }
 
         /* MOON */
 
-        .moon {
-            position: absolute;
+        .moon{
+            position:absolute;
 
-            top: 90px;
-            left: 150px;
+            top:90px;
+            left:150px;
 
-            width: 18px;
-            height: 18px;
+            width:18px;
+            height:18px;
 
-            border-radius: 50%;
+            border-radius:50%;
 
-            background: #fffdf5;
+            background:#fffdf5;
 
             box-shadow:
                 0 0 6px #fffdf5,
                 0 0 12px #fff4c2;
 
-            z-index: 5;
+            z-index:5;
         }
 
-        .moon::after {
+        .moon::after{
 
-            content: "";
+            content:"";
 
-            position: absolute;
+            position:absolute;
 
-            top: -1px;
-            left: 5px;
+            top:-1px;
+            left:5px;
 
-            width: 18px;
-            height: 18px;
+            width:18px;
+            height:18px;
 
-            border-radius: 50%;
+            border-radius:50%;
 
-            background: rgba(0,0,0,0.45);
+            background:rgba(0,0,0,0.45);
         }
 
         /* STAR */
 
-        .star {
-            position: absolute;
+        .star{
+            position:absolute;
 
-            top: 110px;
-            right: 110px;
+            top:110px;
+            right:110px;
 
-            width: 3px;
-            height: 3px;
+            width:3px;
+            height:3px;
 
-            background: white;
+            background:white;
 
-            border-radius: 50%;
+            border-radius:50%;
 
             box-shadow:
                 0 0 5px white,
                 0 0 10px white;
 
-            z-index: 5;
+            z-index:5;
         }
 
         /* CLOUDS */
 
-        .cloud {
-            position: absolute;
+        .cloud{
+            position:absolute;
 
-            color: rgba(255,255,255,0.15);
+            color:rgba(255,255,255,0.15);
 
-            animation: moveClouds linear infinite;
+            animation:moveClouds linear infinite;
 
-            z-index: 5;
+            z-index:5;
         }
 
-        .cloud1 {
-            bottom: 120px;
-            left: -30%;
+        .cloud1{
+            bottom:120px;
+            left:-30%;
 
-            font-size: 160px;
+            font-size:160px;
 
-            animation-duration: 28s;
+            animation-duration:28s;
         }
 
-        .cloud2 {
-            bottom: 60px;
-            left: -40%;
+        .cloud2{
+            bottom:60px;
+            left:-40%;
 
-            font-size: 190px;
+            font-size:190px;
 
-            animation-duration: 35s;
+            animation-duration:35s;
         }
 
-        .cloud3 {
-            bottom: 170px;
-            left: -25%;
+        .cloud3{
+            bottom:170px;
+            left:-25%;
 
-            font-size: 120px;
+            font-size:120px;
 
-            animation-duration: 30s;
+            animation-duration:30s;
         }
 
-        @keyframes moveClouds {
+        @keyframes moveClouds{
 
-            0% {
-                transform: translateX(0);
+            0%{
+                transform:translateX(0);
             }
 
-            100% {
-                transform: translateX(150vw);
+            100%{
+                transform:translateX(150vw);
             }
         }
 
         /* HEARTS */
 
-        .heart {
-            position: absolute;
+        .heart{
+            position:absolute;
 
-            color: rgba(255,192,203,0.35);
+            color:rgba(255,192,203,0.35);
 
-            font-size: 22px;
+            font-size:22px;
 
-            animation: float 14s linear infinite;
+            animation:float 14s linear infinite;
 
-            z-index: 5;
+            z-index:5;
         }
 
-        .heart1 {
-            left: 10%;
-            animation-duration: 10s;
+        .heart1{
+            left:10%;
+            animation-duration:10s;
         }
 
-        .heart2 {
-            left: 30%;
-            animation-duration: 14s;
+        .heart2{
+            left:30%;
+            animation-duration:14s;
         }
 
-        .heart3 {
-            left: 50%;
-            animation-duration: 12s;
+        .heart3{
+            left:50%;
+            animation-duration:12s;
         }
 
-        .heart4 {
-            left: 70%;
-            animation-duration: 16s;
+        .heart4{
+            left:70%;
+            animation-duration:16s;
         }
 
-        .heart5 {
-            left: 88%;
-            animation-duration: 11s;
+        .heart5{
+            left:88%;
+            animation-duration:11s;
         }
 
-        @keyframes float {
+        @keyframes float{
 
-            0% {
-                transform: translateY(100vh);
-                opacity: 0;
+            0%{
+                transform:translateY(100vh);
+                opacity:0;
             }
 
-            20% {
-                opacity: 1;
+            20%{
+                opacity:1;
             }
 
-            100% {
-                transform: translateY(-120vh);
-                opacity: 0;
+            100%{
+                transform:translateY(-120vh);
+                opacity:0;
             }
         }
 
         /* LOVE MESSAGE */
 
-        h1 {
-            position: relative;
+        h1{
+            position:relative;
 
-            z-index: 10;
+            z-index:10;
 
-            text-align: center;
+            text-align:center;
 
-            line-height: 1.8;
+            line-height:1.8;
 
-            padding: 20px;
+            padding:20px;
 
-            font-size: 20px;
+            font-size:20px;
 
-            font-weight: 500;
+            font-weight:500;
 
-            color: white;
+            color:white;
 
             text-shadow:
                 0 0 10px rgba(0,0,0,0.9),
                 0 0 20px rgba(0,0,0,0.7);
 
-            animation: glowText 2.5s infinite alternate;
+            animation:glowText 2.5s infinite alternate;
         }
 
-        @keyframes glowText {
+        @keyframes glowText{
 
-            from {
-                color: #d9e6ff;
+            from{
+                color:#d9e6ff;
             }
 
-            to {
-                color: white;
+            to{
+                color:white;
             }
         }
 
         /* SIGNATURE */
 
-        .signature {
-            position: absolute;
+        .signature{
+            position:absolute;
 
-            right: 20px;
-            bottom: 15px;
+            right:20px;
+            bottom:15px;
 
-            color: rgba(255,255,255,0.9);
+            color:rgba(255,255,255,0.9);
 
-            font-size: 14px;
+            font-size:14px;
 
-            z-index: 10;
+            z-index:10;
 
             text-shadow:
                 0 0 10px rgba(0,0,0,0.8);
@@ -338,20 +320,20 @@
 
         /* MOBILE */
 
-        @media(max-width: 600px) {
+        @media(max-width:600px){
 
-            h1 {
-                font-size: 18px;
-                padding: 15px;
+            h1{
+                font-size:18px;
+                padding:15px;
             }
 
-            .moon {
-                top: 50px;
-                left: 40px;
+            .moon{
+                top:50px;
+                left:40px;
             }
 
-            .star {
-                right: 40px;
+            .star{
+                right:40px;
             }
         }
 
@@ -365,11 +347,15 @@
 
     <div class="slideshow">
 
-        <div class="slide slide1"></div>
-        <div class="slide slide2"></div>
-        <div class="slide slide3"></div>
+        <img src="./photo1.jpg" class="slide slide1">
+        <img src="./photo2.jpg" class="slide slide2">
+        <img src="./photo3.jpg" class="slide slide3">
 
     </div>
+
+    <!-- DARK OVERLAY -->
+
+    <div class="overlay"></div>
 
     <!-- MOON -->
 
@@ -393,7 +379,7 @@
     <div class="heart heart4">💞</div>
     <div class="heart heart5">❤️</div>
 
-    <!-- LOVE MESSAGE -->
+    <!-- MESSAGE -->
 
     <h1>
 
